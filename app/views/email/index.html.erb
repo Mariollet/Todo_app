@@ -2,7 +2,7 @@
   <div class="row">
 
 
-    <div class="col-6">
+    <div class="col-3">
      
       <div class="card">
         <div class="card-header">
@@ -15,7 +15,7 @@
             <% @emails.sort.each do |email| %>
               <li id="list-email-<%= email.id %>" > <a href="email/<%= email.id %>" data-method="GET" data-remote="true" style="font-weight:<%= email.read ? 'normal' : 'bold' %>"> Object : <%= email.object %> </a>
               <a href="email/<%= email.id %>" data-method="DELETE" data-remote="true"><i class="fas fa-trash-alt float-right"></i></a> 
-              <br> <br>
+              <br> <hr>
               </li>
             <% end %>
           </ul>
@@ -23,7 +23,7 @@
 
     </div>
 
-    <div class="col-6">
+    <div class="col-9">
 
       <div class="card">
         <div class="card-header">
