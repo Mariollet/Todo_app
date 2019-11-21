@@ -51,5 +51,7 @@ class EmailController < ApplicationController
     @emails.each do |email|
       email.destroy
     end
+    redirect_to root_path
   end
+
 end
