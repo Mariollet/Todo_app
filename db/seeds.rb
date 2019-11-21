@@ -18,12 +18,12 @@ require 'faker'
     my_task.save
   end
 end
-puts "3 Catégories crée et 9 Tasks crée"
-7.times do 
+puts "3 Catégories crées et 9 Tasks crées"
+20.times do 
   my_email = Email.create(
-    object: Faker::Cannabis.health_benefit,
-    body: Faker::Lorem.paragraph(42),
+    object: Faker::Cannabis.health_benefit.capitalize,
+    body: Faker::Lorem.paragraph(80),
 
   )
 end
-puts "7 Emails crée"
+puts "20 Emails crées"

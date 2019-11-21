@@ -17,8 +17,8 @@ class EmailController < ApplicationController
 
   def create
     @email = Email.new(
-      object: Faker::Cannabis.health_benefit,
-      body: Faker::Lorem.paragraph(6),
+      object: Faker::Cannabis.health_benefit.capitalize,
+      body: Faker::Lorem.paragraph(88),
    )
     if @email.save
       respond_to do |format|
@@ -51,7 +51,13 @@ class EmailController < ApplicationController
     @email = Email.find(params[:id])
     @email.read = false
     @email.save
-    redirect_to root_path
+    respond_to do |format|
+      format.html { 
+        flash[:notice] = "Email no-read"
+        redirect_to root_path
+      }
+      format.js { }
+    end
   end
 
   def destroy_all
