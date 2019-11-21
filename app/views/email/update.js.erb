@@ -1,7 +1,7 @@
 document.querySelector("#list-email-<%= @email.id %> a").style.fontWeight="bold";
 btn = document.getElementById("no-read-toggle");
 if (btn.innerHTML === 'Marquer comme lu') {
-    btn.innerHTML = 'Marquer comme non lu';
+    btn.innerHTML = 'Marquer comme non-lu';
     document.querySelector("#list-email-<%= @email.id %> a").style.fontWeight="normal";
     <% @email.read = true %>
     <% @email.save %>
