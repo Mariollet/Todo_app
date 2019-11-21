@@ -1,24 +1,19 @@
-# README
+# Todo App
+### Project.THP by Thibault Mariolle & Augustin de Louvencourt
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version '2.5.1'
+* Rails version '5.2.3'
 
-Things you may want to cover:
+Start:
+- `$ rails db:create`
+- `$ rails db:migrate`
+- `$ rails db:seed`
+- `$ rails server`
 
-* Ruby version
+Go to: 
+- `localhost:3000` <br>
+Or :
+- `http://todomtp.herokuapp.com/`
 
-* System dependencies
+### Made in Montpellier
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
