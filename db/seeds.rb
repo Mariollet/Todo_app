@@ -22,7 +22,8 @@ puts "3 Catégories crée et 9 Tasks crée"
 7.times do 
   my_email = Email.create(
     object: Faker::Cannabis.health_benefit,
-    body: Faker::Lorem.paragraph(6),
+    body: Faker::Lorem.paragraph(42),
+
   )
 end
 puts "7 Emails crée"

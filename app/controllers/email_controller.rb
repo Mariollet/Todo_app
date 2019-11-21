@@ -46,6 +46,7 @@ class EmailController < ApplicationController
     end
   end
 
+<<<<<<< HEAD
   def update
     @email = Email.find(params[:id])
     @email.read = true
@@ -58,4 +59,12 @@ class EmailController < ApplicationController
     end
   end
 
+=======
+  def destroy_all
+    @emails = Email.all
+    @emails.each do |email|
+      email.destroy
+    end
+  end
+>>>>>>> 9e39d2da08f9092ea0d16c3f87689fefc6cc3df0
 end
