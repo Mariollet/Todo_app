@@ -14,7 +14,7 @@
           <ul id="list-email">
             <% @emails.sort.each do |email| %>
               <li id="list-email-<%= email.id %>" > <a href="email/<%= email.id %>" data-method="GET" data-remote="true" style="font-weight:<%= email.read ? 'normal' : 'bold' %>"> Object : <%= email.object %> </a>
-              <a href="email/<%= email.id %>" data-method="DELETE" data-remote="true"><i class="fas fa-trash-alt"></i></a> 
+              <a href="email/<%= email.id %>" data-method="DELETE" data-remote="true"><i class="fas fa-trash-alt float-right"></i></a> 
               <br> <br>
               </li>
             <% end %>
