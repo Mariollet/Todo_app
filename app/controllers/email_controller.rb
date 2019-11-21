@@ -4,6 +4,14 @@ class EmailController < ApplicationController
     @emails = Email.all
   end
 
+  def show 
+    puts "$" * 80
+    puts params
+    @email = Email.find(params[:id])
+    puts "$" * 80
+    puts params
+  end
+
   def create
     @email = Email.new(
       object: Faker::Cannabis.health_benefit,
