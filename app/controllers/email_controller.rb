@@ -47,7 +47,6 @@ class EmailController < ApplicationController
   end
 
   def update
-    @emails = Email.all
     @email = Email.find(params[:id])
     @email.read = false
     @email.save
