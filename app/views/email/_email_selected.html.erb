@@ -1,5 +1,5 @@
 <h3> Objet : <%= email.object %> </h3>
 <hr>
 <p> <%= email.body %> </p>
-<a type="button" class="btn btn-primary receive_email" href="#" data-method="POST">Marquer comme non-lu</a>
+<a type="button" class="btn btn-primary receive_email" href="email/<%=email.id%>" data-method="PUT">Marquer comme non-lu</a>
 <a type="button" class="btn btn-danger" href="email/<%= email.id %>" data-method="DELETE" data-remote="true">Supprimer</a>

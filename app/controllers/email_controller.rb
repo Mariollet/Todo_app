@@ -47,15 +47,11 @@ class EmailController < ApplicationController
   end
 
   def update
+    @emails = Email.all
     @email = Email.find(params[:id])
-    @email.read = true
-    respond_to do |format|
-      format.html { 
-        flash[:notice] = "Email updated"
-        redirect_to root_path
-      }
-      format.js { }
-    end
+    @email.read = false
+    @email.save
+    redirect_to root_path
   end
 
   def destroy_all
