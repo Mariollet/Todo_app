@@ -18,9 +18,11 @@ class EmailController < ApplicationController
       body: Faker::Lorem.paragraph(6),
    )
     if @email.save
-      flash[:notice] = "Email created"
       respond_to do |format|
-        format.html { redirect_to root_path }
+        format.html { 
+          flash[:notice] = "Email created"
+          redirect_to root_path
+        }
         format.js { }
       end
     else
@@ -32,9 +34,11 @@ class EmailController < ApplicationController
   def destroy
     @email = Email.find(params[:id])
     @email.destroy
-    flash[:notice] = "Email destroyed"
     respond_to do |format|
-      format.html { redirect_to root_path }
+      format.html { 
+        flash[:notice] = "Email destroyed"
+        redirect_to root_path
+      }
       format.js { }
     end
   end
