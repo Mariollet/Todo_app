@@ -3,8 +3,11 @@
 
 
     <div class="col-lg-6">
-     <h1>Liste des emails</h1>
+     
       <div class="card">
+        <div class="card-header">
+          <h1>Liste des emails : <button type="button" class="btn btn-primary" href="email_index_path" data-method="POST">Recevoir un email</button></h1>
+        </div><br>
         <% @emails.each do |email| %>
           <ul>
             <li> Object : <%= email.object %> </li>
@@ -15,8 +18,11 @@
     </div>
 
     <div class="col-lg-6">
-      <h1>Email sélectionné</h1>
+
       <div class="card">
+        <div class="card-header">
+          <h1>Email sélectionné :</h1>
+        </div><br>
         <% @emails.each do |email| %>
           <ul>
             <li> Object : <%= email.object %> </li>
