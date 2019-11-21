@@ -2,4 +2,9 @@ selectList = document.getElementById("email-selected")
 while (selectList.firstChild) {
     selectList.removeChild(selectList.firstChild);
   }
+
+<% @email.read = true %>
+<% @email.save %>
+
+document.querySelector("#list-email-<%= @email.id %> a").style.fontWeight = "normal";
 document.getElementById("email-selected").insertAdjacentHTML("beforeend", "<%= j render 'email_selected', email: @email %>");
