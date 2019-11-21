@@ -6,10 +6,10 @@
      
       <div class="card">
         <div class="card-header bg-light">
-          <h1>Liste des emails :<br>
+          <h2>Liste des emails :<br>
           <a type="button" class="btn btn-light receive_email" href="email" data-method="POST" data-remote="true">Recevoir un email</a>
           <a type="button" class="btn btn-light" href="destroy_all" data-remote="true">Tout supprimer</a>
-          </h1>
+          </h2>
         </div><br>
           <ul id="list-email">
             <% @emails.sort.each do |email| %>
@@ -27,7 +27,7 @@
 
       <div class="card">
         <div class="card-header bg-light">
-          <h1>Email sélectionné :</h1>
+          <h2>Email sélectionné :</h2>
         </div><br>
           <ul id="email-selected" >
           </ul>
