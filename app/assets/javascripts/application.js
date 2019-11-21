@@ -15,4 +15,12 @@
 //= require_tree .
 //= require jquery3
 //= require jquery_ujs
+$(document).ready(function() {
 
+  var avatar = document.getElementsByClassName("rounded-circle")[0];
+  var dropdown = document.getElementById("dropdown-content");
+  dropdown.hidden = true;
+  avatar.addEventListener("click", () => {dropdown.hidden = (dropdown.hidden === false) ? true : false });
+  dropdown.style.marginLeft = "12px"
+  dropdown.style.width = "180px"
+});
