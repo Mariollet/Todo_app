@@ -5,11 +5,14 @@ class EmailController < ApplicationController
   end
 
   def show 
-    puts "$" * 80
-    puts params
     @email = Email.find(params[:id])
-    puts "$" * 80
-    puts params
+    respond_to do |format|
+      format.html { 
+        flash[:notice] = "Email created"
+        redirect_to root_path
+      }
+      format.js { }
+    end
   end
 
   def create

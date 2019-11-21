@@ -10,7 +10,7 @@
         </div><br>
           <ul id="list-email">
             <% @emails.each do |email| %>
-              <li id="list-email-<%= email.id %>" > Object : <%= email.object %>
+              <li id="list-email-<%= email.id %>" > <a href="email/<%= email.id %>" data-method="GET" data-remote="true"> Object : <%= email.object %> </a>
               <a href="email/<%= email.id %>" data-method="DELETE" data-remote="true"><i class="fas fa-trash-alt"></i></a> 
               <br> <br>
               </li>

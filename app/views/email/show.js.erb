@@ -1,0 +1,5 @@
+selectList = document.getElementById("email-selected")
+while (selectList.firstChild) {
+    selectList.removeChild(selectList.firstChild);
+  }
+document.getElementById("email-selected").insertAdjacentHTML("beforeend", "<%= j render 'email_selected', email: @email %>");
