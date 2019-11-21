@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-primary">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-  </button class="logo">
-    <strong><%= link_to "Todo-App-Mtp", root_path, class: "navbar-brand" %></strong>
+  </button>
+  <img class="navbar-brand " href="root" height="50px" width="60px" src="https://pinkeyegraphics.co.uk/wp-content/uploads/gmail-icon.ico">
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 
@@ -22,16 +22,20 @@
         <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
       </li>
       <% end %>
-      <li class="nav-item">
+      <%
+=begin%>
+ <li class="nav-item">
         <%= link_to "Task", index_path, class: "nav-link", class: "btn btn-primary" %>
-      </li>
+      </li> 
+<%
+=end%>
       <li class="nav-item">
         <%= link_to "Email", root_path, class: "nav-link", class: "btn btn-primary" %>
       </li>
       
     </ul>
 
-    <img class="rounded-circle" height="50px" width="50px" src="https://pinkeyegraphics.co.uk/wp-content/uploads/gmail-icon.ico">
+    <img class="rounded-circle" height="50px" width="50px" src="http://digitalspyuk.cdnds.net/17/25/320x320/square-1498216547-avatar-neytiri.jpg">
   </div>  
 
   <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
