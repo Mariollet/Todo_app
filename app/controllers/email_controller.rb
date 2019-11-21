@@ -46,4 +46,10 @@ class EmailController < ApplicationController
     end
   end
 
+  def destroy_all
+    @emails = Email.all
+    @emails.each do |email|
+      email.destroy
+    end
+  end
 end

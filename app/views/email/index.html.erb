@@ -8,13 +8,13 @@
         <div class="card-header">
           <h1>Liste des emails :<br>
           <a type="button" class="btn btn-primary receive_email" href="email" data-method="POST" data-remote="true">Recevoir un email</a>
-          <a type="button" class="btn btn-danger" href="email" method="DELETE">Supprimer</a>
+          <a type="button" class="btn btn-danger" href="email" method="destroy_all">Supprimer</a>
           </h1>
         </div><br>
           <ul id="list-email">
             <% @emails.each do |email| %>
               <li id="list-email-<%= email.id %>" > <a href="email/<%= email.id %>" data-method="GET" data-remote="true"> Object : <%= email.object %> </a>
-              <a href="email/<%= email.id %>" data-method="DELETE" data-remote="true"><i class="fas fa-trash-alt"></i></a> 
+              <a href="email/<%= email.id %>" data-method="DELETE" data-remote="true"><i class="fas fa-trash-alt float-right"></i></a>
               <br> <br>
               </li>
             <% end %>
