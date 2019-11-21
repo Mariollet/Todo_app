@@ -59,7 +59,13 @@ class EmailController < ApplicationController
     @emails.each do |email|
       email.destroy
     end
-    redirect_to root_path
+    respond_to do |format|
+      format.html { 
+        flash[:notice] = "All emails destroyed"
+        redirect_to root_path
+      }
+      format.js { }
+    end
   end
 
 end
