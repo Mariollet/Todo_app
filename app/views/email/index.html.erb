@@ -8,11 +8,14 @@
         <div class="card-header">
           <h1>Liste des emails : <a type="button" class="btn btn-primary" href="email" data-method="POST">Recevoir un email</a></h1>
         </div><br>
-        <% @emails.each do |email| %>
           <ul>
-            <li> Object : <%= email.object %> </li>
+            <% @emails.each do |email| %>
+              <li id="list-email-<%= email.id %>" > Object : <%= email.object %>
+              <a href="email/<%= email.id %>" data-method="DELETE" data-remote="true"><i class="fas fa-trash-alt"></i></a> 
+              </li>
+              <br>
+            <% end %>
           </ul>
-        <% end %>
       </div>
 
     </div>
