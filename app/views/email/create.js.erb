@@ -1,3 +1,2 @@
+document.getElementById("list-email").insertAdjacentHTML("beforeend", "<%= j render 'email', email: @email %>")
 alert("L'email a bien été ajouté !");
-document.getElementById("list-email").appendChild("<%= j render 'email', email: @email %>")
-document.getElementById("list-email-<%= @email.id - 1 %>").insertAdjacentHTML("beforeend", "<%= j render 'email', email: @email %>")
