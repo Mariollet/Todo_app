@@ -2,7 +2,9 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <img class="navbar-brand " href="root" height="50px" width="50px" src="https://pinkeyegraphics.co.uk/wp-content/uploads/gmail-icon.ico">
+  <a href="/email">
+  <img class="navbar-brand" height="50px" width="50px" src="https://pinkeyegraphics.co.uk/wp-content/uploads/gmail-icon.ico">
+  </a>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 
@@ -22,13 +24,11 @@
         <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
       </li>
       <% end %>
-      <%
-=begin%>
- <li class="nav-item">
-        <%= link_to "Task", index_path, class: "nav-link", class: "btn btn-primary" %>
-      </li> 
-<%
-=end%>
+
+        <li class="nav-item">
+        <%= link_to "Todo", index_path, class: "nav-link", class: "btn btn-primary" %>
+        </li> 
+
       <li class="nav-item">
         <%= link_to "Email", root_path, class: "nav-link", class: "btn btn-primary" %>
       </li>
