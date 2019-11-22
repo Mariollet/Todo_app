@@ -13,9 +13,15 @@
         </div><br>
           <ul id="list-email">
             <% @emails.sort.each do |email| %>
-              <li id="list-email-<%= email.id %>" > <a href="email/<%= email.id %>" data-method="GET" data-remote="true" style="font-weight:<%= email.read ? 'normal' : 'bold' %>"> Object : <%= email.object %> </a>
-              <a href="email/<%= email.id %>" data-method="DELETE" data-remote="true"><i class="fas fa-trash-alt float-right"></i></a> 
-              <br> <hr>
+              <li id="list-email-<%= email.id %>"> <a href="email/<%= email.id %>" data-method="GET" data-remote="true" style="font-weight:<%= email.read ? 'normal' : 'bold' %>"> Object : <%= email.object %> </a>
+              <% if email.read == false %>
+                <a href="email/<%= email.id %>" data-method="DELETE" data-remote="true"><i class="fas fa-trash-alt float-right"></i></a>
+                <a id="enveloppe-<%= email.id %>" href="email/<%= email.id %>" data-method="GET" data-remote="true"><i class="fas fa-envelope float-right"></i></a>
+              <% elsif email.read == true %>
+                <a href="email/<%= email.id %>" data-method="DELETE" data-remote="true"><i class="fas fa-trash-alt float-right"></i></a>
+                <a id="enveloppe-open-<%= email.id %>" href="email/<%= email.id %>" data-method="GET" data-remote="true"><i class="far fa-envelope-open float-right"></i></a>
+              <% end %>
+               <br> <hr>
               </li>
             <% end %>
           </ul>
