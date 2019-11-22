@@ -13,8 +13,12 @@
   padding: 0%;
 }
 
-.modal-dialog,  .modal-title {
+.modal-dialog {
   text-align: center;
+}
+
+.modal-title {
+  color: white;
 }
 
 .navbar {
@@ -35,6 +39,7 @@
 .devise {
 text-align: center;
 }
+
 
 .email-1 {
   height: 100px;
